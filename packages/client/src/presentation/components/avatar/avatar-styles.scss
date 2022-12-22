@@ -1,0 +1,23 @@
+@import '../../styles/global.scss';
+
+.avatar {
+  @extend .uk-flex-inline;
+
+  img {
+    height: max-content;
+  }
+
+  div {
+    @extend .uk-flex, .uk-flex-column;
+    margin-bottom: 0;
+    p:first-child {
+      margin-bottom: .5rem;
+    }
+    
+    p {
+      @extend .uk-article-meta;
+      margin: 0;
+      margin-left: .5rem;
+    }
+  }
+}

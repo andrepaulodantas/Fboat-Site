@@ -1,0 +1,9 @@
+@import '../../styles/global.scss';
+
+.editArticle {
+  @extend content, section;
+  
+  > h3 {
+    margin-top: 0;
+  }
+}

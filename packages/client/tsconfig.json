@@ -1,0 +1,23 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "jsx": "react",
+    "rootDirs": ["src", "tests"],
+    "outDir": "dist",
+    "declarationDir": "dist",
+    "allowJs": true,
+    "strictNullChecks": false,
+    "noImplicitAny": false,
+    "useUnknownInCatchVariables": false,
+    "baseUrl": "src",
+    "paths": {
+      "@/client/*": ["*"],
+      "@/tests/*": ["../tests/*"]
+    },
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "removeComments": true
+  },
+  "include": ["src", "tests", "jest.*.ts", "migrations", "webpack.*.ts"],
+  "references": [{ "path": "../core" }]
+}

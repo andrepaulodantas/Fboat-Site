@@ -1,0 +1,79 @@
+{
+  "name": "@fboat/core",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/src",
+  "types": "dist/src/index.d.ts",
+  "exports": {
+    ".": "./dist/src/index.js",
+    "./content-system/schemas": "./dist/src/content-system/schemas/index.js",
+    "./content-system/protocols": "./dist/src/content-system/protocols/index.js",
+    "./content-system/models": "./dist/src/content-system/models/index.js",
+    "./content-system/*": "./dist/src/content-system/*.js",
+    "./content-system": "./dist/src/content-system/index.js",
+    "./iam/schemas": "./dist/src/iam/schemas/index.js",
+    "./iam/protocols": "./dist/src/iam/protocols/index.js",
+    "./iam/models": "./dist/src/iam/models/index.js",
+    "./iam/*": "./dist/src/iam/*.js",
+    "./iam": "./dist/src/iam/index.js",
+    "./shared/gateways": "./dist/src/shared/gateways/index.js",
+    "./shared/models": "./dist/src/shared/models/index.js",
+    "./shared/*": "./dist/src/shared/*.js",
+    "./shared": "./dist/src/shared/index.js"
+  },
+  "typesVersions": {
+    "*": {
+      "content-system/*": [
+        "dist/src/content-system/*"
+      ],
+      "iam/*": [
+        "dist/src/iam/*"
+      ],
+      "shared/*": [
+        "dist/src/shared/*"
+      ]
+    }
+  },
+  "private": true,
+  "devDependencies": {
+    "@types/jest": "^28.1.6",
+    "@types/module-alias": "^2.0.1",
+    "@types/node": "^18.7.2",
+    "@types/uuid": "^8.3.4",
+    "@typescript-eslint/eslint-plugin": "^5.32.0",
+    "coveralls": "^3.1.1",
+    "eslint-config-standard-with-typescript": "^22.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.4",
+    "eslint-plugin-promise": "^6.0.0",
+    "ts-jest": "^28.0.7",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0"
+  },
+  "dependencies": {
+    "fluent-json-schema": "^3.1.0",
+    "module-alias": "^2.2.2",
+    "reflect-metadata": "^0.1.13",
+    "uuid": "^9.0.0"
+  },
+  "scripts": {
+    "build": "npm run clean && tsc -p tsconfig-build.json",
+    "clean": "rimraf dist",
+    "test": "APP_ENV=test jest --passWithNoTests --runInBand --no-cache",
+    "test:watch": "npm test -- --watch",
+    "test:watch:changed": "npm test -- --watch --onlyChanged",
+    "test:coverage": "npm t -- --coverage",
+    "test:coveralls": "npm run test:coverage && coveralls < coverage/lcov.info"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/msalvexx/fboat.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/msalvexx/fboat/issues"
+  },
+  "homepage": "https://github.com/msalvexx/fboat#readme"
+}

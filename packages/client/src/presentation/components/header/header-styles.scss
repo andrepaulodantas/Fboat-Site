@@ -1,0 +1,97 @@
+@import '../../styles/global.scss';
+
+.header {
+  background-color: $navbar-background;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+
+  > nav {
+    @extend .uk-margin, .uk-navbar;
+
+    margin-bottom: 0;
+    padding: 0 30rem;
+    -webkit-box-shadow: 0px 9px 9px -6px #D6D6D6; 
+    box-shadow: 0px 9px 9px -6px #D6D6D6;
+  
+    > :first-child {
+      @extend .uk-navbar-left;
+      
+      > a {
+        @extend .uk-navbar-item, .uk-logo;
+        color: $navbar-text-color;
+
+        &:hover {
+          color: $navbar-text-color-emphasis;
+        }
+      }
+    }
+  
+    > :last-child {
+      @extend .uk-navbar-right;
+     
+      > ul {
+        @extend .uk-navbar-nav;  
+  
+        > a {
+          @extend .uk-navbar-item;
+          color: $navbar-text-color;
+
+          > &:hover {
+            color: $navbar-text-color-emphasis;
+          }
+        }
+      }
+  
+      > div {
+        @extend .uk-navbar-item;  
+      }
+      
+      > div[data-action] a {
+        @extend .uk-button-white;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .header > nav {
+    padding: 0 20rem;
+  }
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1999px) {
+  .header > nav {
+    padding: 0 10rem;
+  }
+}
+
+@media screen and (min-width: 980px) and (max-width: 1279px) {
+  .header > nav {
+    padding: 0 5rem;
+  }
+}
+
+@media screen and (min-width: 780px) and (max-width: 979px) {
+  .header > nav {
+    padding: 0 2.5rem;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 779px) {
+  .header > nav {
+    padding: 0 1rem;
+  }
+}
+
+.logout {
+  a {
+    @extend .uk-text-danger;
+    color: $global-danger-lighten;
+
+    &:hover {
+      text-decoration: underline !important;
+    }
+  }
+}

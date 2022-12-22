@@ -1,0 +1,22 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "declarationDir": "./dist",
+    "noImplicitAny": false,
+    "rootDirs": ["src", "tests"],
+    "allowJs": true,
+    "strictNullChecks": false,
+    "baseUrl": "src",
+    "paths": {
+      "@/server/*": ["*"],
+      "@/tests/*": ["../tests/*"]
+    },
+    "noImplicitOverride": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "removeComments": true
+  },
+  "include": ["src", "tests", "jest.*.ts", "migrations"],
+  "references": [{ "path": "../core" }]
+}
