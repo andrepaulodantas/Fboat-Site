@@ -25,10 +25,10 @@ O projeto client é o frontend da aplicação. Foi desenvolvido utilizando o fra
 
 ## Como utlizar?
 
-1 - Use npm outdated para descobrir dependências que estão desatualizadas.
-2 - Use npm update para realizar atualizações de dependências seguras.
-3 - Use npm install <packagename>@latest para atualizar para a versão principal mais recente de um pacote.
-4 - Use npx npm-check-updates -u e npm install para atualizar todas as dependências para suas versões principais mais recentes.
+- 1 - Use npm outdated para descobrir dependências que estão desatualizadas.
+- 2 - Use npm update para realizar atualizações de dependências seguras.
+- 3 - Use npm install <packagename>@latest para atualizar para a versão principal mais recente de um pacote.
+- 4 - Use npx npm-check-updates -u e npm install para atualizar todas as dependências para suas versões principais mais recentes.
 
 Instale as dependências na raíz do projeto
 `npm install`
