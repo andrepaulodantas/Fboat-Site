@@ -33,6 +33,8 @@ O projeto client é o frontend da aplicação. Foi desenvolvido utilizando o fra
 Instale as dependências na raíz do projeto
 `npm install`
 
+`npm run build:core`
+
 #### Rodando o server
 
 Construa o projeto
